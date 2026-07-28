@@ -18,6 +18,23 @@ Everything here is written in my own words as I continue learning and growing.
 
 ---
 
+## 🚀 Current Status
+
+**Current Sprint:** Sprint 0 – Development Environment Setup ✅
+
+**Currently Learning:**
+- Java 25
+- Spring Boot Fundamentals
+- Maven
+
+**Current Project:**
+Production-style E-Commerce Backend
+
+**Last Updated:**
+29 July 2026
+
+---
+
 ## 🎯 Goals
 
 - Master Java
