@@ -1,6 +1,6 @@
 # Day 1 - Spring Core: IoC, Beans & ApplicationContext
 
-**Date:** August 2026
+**Date:** 29th July 2026
 
 ---
 
