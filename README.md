@@ -90,7 +90,7 @@ Production-style E-Commerce Backend
 ## 📚 Learning Roadmap
 
 - [x] Sprint 0 – Development Environment Setup
-- [ ] Sprint 1 – Spring Boot Foundation
+- [x] Sprint 1 – Spring Boot Foundation
 - [ ] Sprint 2 – MySQL Integration
 - [ ] Sprint 3 – Building REST APIs
 - [ ] Sprint 4 – Authentication & Authorization
