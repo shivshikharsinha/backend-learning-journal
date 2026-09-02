@@ -3,6 +3,7 @@ package com.techfreak.cartify.controller;
 import com.techfreak.cartify.model.Product;
 import com.techfreak.cartify.service.ProductService;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -29,7 +30,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public Product createProduct(@RequestBody Product product) {
+    public Product createProduct(@Valid @RequestBody Product product) {
         return productService.createProduct(product);
     }
     @DeleteMapping("/{id}")

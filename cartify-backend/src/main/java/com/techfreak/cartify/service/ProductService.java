@@ -1,6 +1,5 @@
 package com.techfreak.cartify.service;
 
-import com.techfreak.cartify.exception.InvalidProductException;
 import com.techfreak.cartify.exception.ProductNotFoundException;
 import com.techfreak.cartify.model.Product;
 import com.techfreak.cartify.repository.ProductRepository;
@@ -39,11 +38,11 @@ public class ProductService {
             throw new RuntimeException("Product cannot be null.");
         }
 
-        String productName = product.getName();
+        //String productName = product.getName();
         Long productId = product.getId();
-        Double productPrice = product.getPrice();
+        //Double productPrice = product.getPrice();
 
-        if (productId == null) {
+       /* if (productId == null) {
             throw new InvalidProductException("Product ID cannot be null.");
         }
 
@@ -58,7 +57,7 @@ public class ProductService {
         if (productPrice < 0) {
             throw new InvalidProductException("Product price cannot be negative.");
         }
-
+        */
         if (productRepository.findById(productId).isPresent()) {
             throw new ProductAlreadyExistsException("Product ID already exists.");
         }
