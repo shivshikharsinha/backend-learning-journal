@@ -92,9 +92,9 @@ Production-style E-Commerce Backend
 - [x] Sprint 0 – Development Environment Setup
 - [x] Sprint 1 – Spring Boot Foundation
 - [ ] Sprint 2 – MySQL Integration
-- [ ] Sprint 3 – Building REST APIs
+- [ ] 🔄 Sprint 3 – Building REST APIs
 - [ ] Sprint 4 – Authentication & Authorization
-- [ ] Sprint 5 – Validation & Exception Handling
+- [ ] 🔄 Sprint 5 – Validation & Exception Handling
 - [ ] Sprint 6 – Docker
 - [ ] Sprint 7 – Redis
 - [ ] Sprint 8 – Apache Kafka
