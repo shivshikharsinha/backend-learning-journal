@@ -94,7 +94,7 @@ Production-style E-Commerce Backend
 - [ ] Sprint 2 – MySQL Integration
 - [ ] 🔄 Sprint 3 – Building REST APIs
 - [ ] Sprint 4 – Authentication & Authorization
-- [ ] 🔄 Sprint 5 – Validation & Exception Handling
+- [x] Sprint 5 – Validation & Exception Handling
 - [ ] Sprint 6 – Docker
 - [ ] Sprint 7 – Redis
 - [ ] Sprint 8 – Apache Kafka
