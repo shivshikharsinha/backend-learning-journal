@@ -33,35 +33,6 @@ public class ProductService {
     }
 
     public Product createProduct(Product product) {
-
-        if (product == null) {
-            throw new RuntimeException("Product cannot be null.");
-        }
-
-        //String productName = product.getName();
-        Long productId = product.getId();
-        //Double productPrice = product.getPrice();
-
-       /* if (productId == null) {
-            throw new InvalidProductException("Product ID cannot be null.");
-        }
-
-        if (productName == null || productName.isBlank()) {
-            throw new InvalidProductException("Product name cannot be blank.");
-        }
-
-        if (productPrice == null) {
-            throw new InvalidProductException("Product price cannot be null.");
-        }
-
-        if (productPrice < 0) {
-            throw new InvalidProductException("Product price cannot be negative.");
-        }
-        */
-        if (productRepository.findById(productId).isPresent()) {
-            throw new ProductAlreadyExistsException("Product ID already exists.");
-        }
-
         return productRepository.save(product);
     }
 
