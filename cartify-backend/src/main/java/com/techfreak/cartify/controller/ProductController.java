@@ -16,11 +16,12 @@ public class ProductController {
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
+
     //    public Product getProduct() {
     //      return productService.getProduct();
     //    }
     @GetMapping("/{id}")
-    public Product getProductById(@PathVariable Long id){
+    public Product getProductById(@PathVariable Long id) {
         return productService.getProductById(id);
     }
 
@@ -33,13 +34,26 @@ public class ProductController {
     public Product createProduct(@Valid @RequestBody Product product) {
         return productService.createProduct(product);
     }
+
     @DeleteMapping("/{id}")
-    public void deleteProductById(@PathVariable Long id){
+    public void deleteProductById(@PathVariable Long id) {
         productService.deleteProduct(id);
     }
 
     @PutMapping("/{id}")
-    public Product updateProduct(@PathVariable Long id,  @Valid @RequestBody Product product) {
+    public Product updateProduct(@PathVariable Long id, @Valid @RequestBody Product product) {
         return productService.updateProduct(id, product);
     }
+
+    @GetMapping("/name/{name}")
+    public List<Product> getProductsByName(@PathVariable String name) {
+        return productService.getProductsByName(name);
     }
+
+    @GetMapping("/price/greater-than/{price}")
+    public List<Product> getProductsByPriceGreaterThan(
+            @PathVariable Double price) {
+
+        return productService.getProductsByPriceGreaterThan(price);
+    }
+}

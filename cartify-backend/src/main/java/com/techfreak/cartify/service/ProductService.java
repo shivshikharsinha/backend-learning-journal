@@ -60,5 +60,12 @@ public class ProductService {
 
         return existingProduct;
     }
+    public List<Product> getProductsByName(String name) {
+        return productRepository.findByName(name);
+    }
+    public List<Product> getProductsByPriceGreaterThan(Double price) {
+        return productRepository.findByPriceGreaterThan(price);
+    }
+
 
 }
