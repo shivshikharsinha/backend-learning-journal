@@ -3,6 +3,7 @@ package com.techfreak.cartify.service;
 import com.techfreak.cartify.exception.ProductNotFoundException;
 import com.techfreak.cartify.model.Product;
 import com.techfreak.cartify.repository.ProductRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import com.techfreak.cartify.exception.ProductAlreadyExistsException;
 
@@ -41,7 +42,23 @@ public class ProductService {
         if (id == null) {
             throw new RuntimeException("Product ID cannot be null.");
         }
-        getProductById(id);
-        productRepository.deleteById(id);
+        Product product = productRepository.findById(id)
+                .orElseThrow(() ->
+                        new ProductNotFoundException("Product not found."));
+        productRepository.delete(product);
     }
+
+    @Transactional
+    public Product updateProduct(Long id, Product updatedProduct) {
+
+        Product existingProduct = productRepository.findById(id)
+                .orElseThrow(() ->
+                        new ProductNotFoundException("Product not found."));
+
+        existingProduct.setName(updatedProduct.getName());
+        existingProduct.setPrice(updatedProduct.getPrice());
+
+        return existingProduct;
+    }
+
 }
