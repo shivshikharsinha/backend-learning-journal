@@ -6,6 +6,8 @@ import com.techfreak.cartify.repository.ProductRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import com.techfreak.cartify.exception.ProductAlreadyExistsException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -66,6 +68,8 @@ public class ProductService {
     public List<Product> getProductsByPriceGreaterThan(Double price) {
         return productRepository.findByPriceGreaterThan(price);
     }
-
+    public Page<Product> getProducts(Pageable pageable) {
+        return productRepository.findAll(pageable);
+    }
 
 }

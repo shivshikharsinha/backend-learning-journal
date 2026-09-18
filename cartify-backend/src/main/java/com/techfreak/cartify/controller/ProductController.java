@@ -4,7 +4,8 @@ import com.techfreak.cartify.model.Product;
 import com.techfreak.cartify.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 @RestController
@@ -55,5 +56,9 @@ public class ProductController {
             @PathVariable Double price) {
 
         return productService.getProductsByPriceGreaterThan(price);
+    }
+    @GetMapping("/page")
+    public Page<Product> getProducts(Pageable pageable) {
+        return productService.getProducts(pageable);
     }
 }
